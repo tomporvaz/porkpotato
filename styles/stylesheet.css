@@ -1,0 +1,354 @@
+html{
+    overflow-y: scroll;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+P{
+	font-family: Impact, Charcoal, sans-serif;
+    color:darkolive;
+    display: block;
+    padding: 0 10px;
+    margin: 25px auto;
+    max-width: 650px;
+    line-height: 1.3;
+}
+
+a{
+    color: black;
+}
+
+a:visited{
+    color:rgb(41, 41, 40);
+}
+
+h1{
+	Font-size:xx-large;
+	Font-family: sans-serif;
+	color: drab;
+	text-align: center;
+    margin: 60px 5vw 30px;
+        
+}
+
+h3{
+    font-family: Impact, Charcoal, sans-serif;
+    color:darkolive;
+    display: block;
+    padding: 0 10px;
+    margin: 25px auto;
+    max-width: 650px;
+}
+
+img#hiking{
+    display: block;
+    margin: 80px auto 40px;
+}
+
+img#yurts{
+    display: absolute;
+    top: 0;
+    left: 0;
+    margin: 100px auto 0px; 
+    width: 80vw;
+    max-width: 600px;
+    object-fit: contain;
+}
+
+#yurtUnsplash{
+    width: 80vw;
+    max-width: 600px;
+    margin: auto; 
+}
+
+.photoCredit{
+    font-family: Impact, Charcoal, sans-serif;
+    color:darkolive;
+    font-size: .7em;
+    text-align: right;
+}
+
+
+
+/*Portal-bar. Below this comment contains all of the code for the 
+portal bar, including the code for the fluffy white clouds 
+containing the links*/
+.portal-bar{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color:rgb(186, 225, 250);
+    /* height:80px; */
+    width:100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 100px auto 1fr;
+    grid-template-rows: auto auto;
+    z-index:1;
+    
+    box-sizing: content-box;
+}
+
+.portal-buttons{
+    display: flex;
+    width: 70vw;
+    max-width: 700px;
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    grid-column: 3/4;
+}
+
+a.cloud{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: black;
+    text-decoration: none; 
+}
+
+a:visited.cloud{
+    color: rgb(41, 40, 40);
+}
+
+.cloud{
+    width: 100px; height: 25px;
+    text-align: center;
+    background: #fff;
+    font-weight: 500;
+    box-shadow: 3px 5px 2px rgba(43, 78, 100, 0.719);
+    /*background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+    background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);*/
+    
+    border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+    line-height: 1;    
+    position:relative;
+    margin:40px 10px 10px 10px;
+    padding: 3px;
+    box-sizing: border-box;
+    float:right;
+}
+.cloud:after, .cloud:before {
+	content: "";
+	position: absolute;
+	background: #fff;
+	z-index: -1
+}
+
+.cloud:after {
+	width: 45px; height: 45px;
+	top: -20px; left: 10px;
+	
+	border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+}
+
+.cloud:before {
+	width: 53px; height: 53px;
+	top: -28px; right: 10px;
+	
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+}
+
+
+
+#home_logo{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 20px;
+    align-self: center;
+    padding: 5px;
+    z-index: 100;
+}
+#porvazniklt{
+    
+}
+
+#porvaznet{
+    
+}
+
+    
+/*this is for the porkpotato on the main page*/
+img.main{
+    width: 80vw;
+    max-width: 550px;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:80px;
+    margin-bottom: 20px;
+    padding: 10px;
+        
+        
+}
+
+/* This section contains all css for the navbar*/
+.nav{
+    color: rgba(0,0,0,0);
+    max-width: 700px;
+    margin:auto;
+    padding:5px 0 5px;
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-area: 2/2/3/4;
+}
+
+#nav_about{
+    width: 98px;
+    height:39px;
+    background-image:url(../images/About.png);
+}
+
+#nav_apps{
+    width: 79px;
+    height:39px;
+    background-image:url(../images/Apps.png);
+}
+
+#nav_yurts{
+    width: 86px;
+    height:39px;
+    background-image:url(../images/Yurts.png);
+}
+
+#nav_swineherd{
+    width: 167px;
+    height:39px;
+    background-image:url(../images/Swineherd.png);
+}
+
+#nav_adventures{
+    width: 182px;
+    height:39px;
+    background-image:url(../images/Adventures.png);
+}
+.nav a{
+    margin: 5px;
+    color:rgba(0,0,0,0);
+}
+
+ /*hero image css*/
+ 
+ .hero-section{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display:grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+  
+    
+  
+  }
+  
+  .hero-section img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit:cover;
+    height: 100vh;
+    width: 100vw;
+    
+  }
+  
+  .hero-text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    align-self: center;
+    text-align: center;
+    z-index: 50;
+    height:100vh;
+    width:100%;
+    background-color: rgba(3, 2, 7, 0.3);
+  }
+  
+  .hero-text h1{
+    color: white;
+    font-size: 12vmin;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    margin: 0;
+    padding: 0 .2em;
+    align-self:center;
+    
+  }
+
+  .hero-text h2{
+      color: white;
+      font-size: 5vmin;
+      font-family: 'Courier New', Courier, monospace;
+      text-decoration: solid;
+
+  }
+
+
+/*Styling for Projects section on apps page*/
+ 
+#projects {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 0;    
+ }
+ 
+ #projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+ 
+ .project-tile {
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows: 1fr 80% 1fr 20% 1fr;
+ }
+ 
+ .project-tile img{
+    margin: 0 auto;
+    width:100%;
+    grid-area: 2/2/3/3;
+    border: grey;
+    box-shadow: 3px 2px 2px darkgrey;
+ }
+ 
+ .project-tile header{
+    color: rgb(0, 0, 0);
+    font-family: courier;
+    font-size:20px;
+    text-align: center;
+    grid-area: 4/2/5/3;
+    text-decoration-line: none;
+    text-decoration-color: #000000;
+ }
+
+ /*Card container for tiles of elements*/
+ .card-container{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ 
+     margin: 5vw;
+ }

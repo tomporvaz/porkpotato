@@ -1,0 +1,158 @@
+body{
+    margin: 0px;
+ }
+ 
+ h2 {
+    font-family: courier;
+    text-align: center;
+    font-size: 10vmin;
+ }
+ 
+ 
+ 
+ /*Navbar CSS*/
+ 
+ #navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 52;
+    width:100%;
+    display: flex;
+    flex-direction: rows;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    background-color: rgba(3, 2, 7, 0.8)
+ }
+ 
+ #navbar a {
+    color: white;
+    padding:8px;
+    margin: 4px;
+    font-weight: medium;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 18px;
+    
+ }
+ 
+ /*Welcome Section CSS*/
+ 
+ #welcome-section{
+   position: relative;
+   top: 0px;
+   left: 0px;
+   display:grid;
+   grid-template-columns: 100vw;
+   grid-template-rows: 100vh;
+ 
+   
+ 
+ }
+ 
+ #welcome-section img{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   object-fit:cover;
+   height: 100vh;
+   width: 100vw;
+   
+ }
+ 
+ #welcome-text{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   display: grid;
+   align-self: center;
+   text-align: center;
+   z-index: 50;
+   height:100vh;
+   width:100%;
+   background-color: rgba(3, 2, 7, 0.3);
+ }
+ 
+ #welcome-text h1{
+   color: white;
+   font-size: 12vmin;
+   font-family: monospace;
+   font-weight: 1000;
+   margin: 0;
+   padding: 0 .2em;
+   align-self:center;
+   
+ }
+ 
+ /*Projects section*/
+ 
+ #projects {
+    width: 100%;
+    background-color: #d4d4d4;
+    padding: 30px 0;
+    
+    
+ }
+ 
+ #projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+ 
+ .project-tile {
+    background-color: #000;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows: 1fr 60% 1fr 30% 1fr;
+ }
+ 
+ .project-tile img{
+    margin: 0 auto;
+    width:100%;
+    grid-area: 2/2/3/3;
+ }
+ 
+ .project-tile header{
+    color: white;
+    font-family: courier;
+    font-size:20px;
+    text-align: center;
+    grid-area: 4/2/5/3;
+    text-decoration-line: underline;
+    text-decoration-color: #e6cc22;
+ }
+ 
+ /*Contact section*/
+ #contact {
+    position: static;
+    left: -5px;
+    background-color: #000;
+    color: white;
+    font-family: courier;
+    text-align: center;
+    width: 100%;
+    padding: 30vh 0;
+ }
+ 
+ 
+ 
+ #contact p {
+    font-size: 5vh;
+ }
+ 
+ #contact a {
+    color:#f1f227;
+ 
+ }
+ 
+ @media(max-width: 560px) {
+    body #navbar{
+       justify-content: center;
+    }
+ }
