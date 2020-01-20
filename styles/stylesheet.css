@@ -19,7 +19,7 @@ P{
 }
 
 a{
-    color: black;
+    color: rgb(15, 33, 114);
 }
 
 a:visited{
@@ -201,9 +201,9 @@ img.main{
 /* This section contains all css for the navbar*/
 .nav{
     color: rgba(0,0,0,0);
-    max-width: 700px;
+    max-width: 750px;
     margin:auto;
-    padding:5px 0 5px;
+    padding:5px 10px 5px;
     text-align:center;
     display: flex;
     flex-wrap: wrap;
@@ -241,7 +241,7 @@ img.main{
     background-image:url(../images/Adventures.png);
 }
 .nav a{
-    margin: 5px;
+    margin: 5px 12px;
     color:rgba(0,0,0,0);
 }
 
