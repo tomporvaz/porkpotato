@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+main {
+  width: 1188px;
+  margin: auto;
+  padding: 20px;
+}
+
 p {
   /* todo */
 }
@@ -22,11 +28,6 @@ a:visited {
   /* todo */
 }
 
-
-
-
-
-
 /*Portal-bar. Below this comment contains all of the code for the 
 portal bar, including the code for the fluffy white clouds 
 containing the links*/
@@ -34,7 +35,7 @@ containing the links*/
   position: sticky;
   top: 0px;
   left: 0px;
-  background: #FCFCFC;
+  background: #fcfcfc;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   height: 64px;
 }
@@ -82,12 +83,14 @@ containing the links*/
   text-decoration: none;
 }
 
-#nav_portfolio {}
+#nav_portfolio {
+}
 
-#nav_skills {}
+#nav_skills {
+}
 
-#nav_about {}
-
+#nav_about {
+}
 
 /*hero image css*/
 
@@ -98,9 +101,6 @@ containing the links*/
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 100vh;
-
-
-
 }
 
 .hero-section img {
@@ -110,7 +110,6 @@ containing the links*/
   object-fit: cover;
   height: 100vh;
   width: 100vw;
-
 }
 
 .hero-text {
@@ -129,22 +128,19 @@ containing the links*/
 .hero-text h1 {
   color: white;
   font-size: 12vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 1000;
   margin: 0;
-  padding: 0 .2em;
+  padding: 0 0.2em;
   align-self: center;
-
 }
 
 .hero-text h2 {
   color: white;
   font-size: 5vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   text-decoration: solid;
-
 }
-
 
 /*Styling for Projects section on apps page*/
 
@@ -201,7 +197,6 @@ containing the links*/
   margin: auto;
 }
 
-
 /* freecodecamp styles */
 .fcc-main {
   display: grid;
@@ -212,7 +207,6 @@ containing the links*/
 
 .fcc-fullstack-image-container {
   grid-area: 1 / 2 / 4 / 3;
-
 }
 
 .fcc-fullstack-image {
@@ -268,10 +262,120 @@ containing the links*/
   text-align: center;
 }
 
+/* Slideshow */
+.slideshow {
+  /* width: 100%;
+  max-width: 1188px; */
+  margin: 42px auto 58px;
+}
 
+.slide {
+  background-color: #fafafa;
+  height: 530px;
+  margin: 10px;
+  padding: 0px;
+}
+
+#slide1-text {
+  /* Tom Porvaznik builds web apps to simplify, empower, automate. */
+
+  /* position: absolute; */
+  /* width: 304px; */
+  /* height: 357px; */
+  /* left: 174px; */
+  /* top: 140px; */
+  margin: 34px 0px 0px 48px;
+
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 62px;
+  /* or 135% */
+
+  color: var(--h1-color);
+}
+
+.slide-content {
+  display: flex;
+}
+
+span.orange-underline {
+  border-bottom: 6px solid var(--accent3);
+  display: inline-block;
+  line-height: 36px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+button#build-btn {
+  margin: 20px 40px 43px;
+
+  /* Build-btn */
+
+  /* position: absolute; */
+  width: 287px;
+  height: 60px;
+  /* left: 179px;
+  top: 533px; */
+
+  /* DropShadow */
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+
+  /* Rectangle 30 */
+
+  box-sizing: border-box;
+
+  background: #f5f5f5;
+  border: 6px solid var(--accent3);
+  border-radius: 6px;
+
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+
+  color: #004db3;
+}
+
+button#build-btn:hover {
+  background: #f0f0f0;
+  border: 6px solid #004db3; /* accent2 */
+  border-radius: 6px;
+  color: #00357a; /* h1 color */
+
+  /* Rectangle 30 */
+
+  /* box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 6.25%;
+
+background: #F0F0F0;
+border: 6px solid #004DB3;
+border-radius: 6px; */
+  /* Property 1=defualt, Property 2=unclicked */
+
+  /* position: absolute;
+width: 287px;
+height: 64px;
+left: 20px;
+top: 94px; */
+
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+  transform: translate(2px, 2px);
+}
 
 /* * * VARIABLES * * */
 
 :root {
   --GrayText2-Lighter: #575757;
+  --h1-color: #00357a;
+  --accent3: #f26419;
 }
