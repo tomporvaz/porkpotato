@@ -11,9 +11,10 @@ body {
 }
 
 main {
-  width: 1188px;
+  width: 100%;
+  max-width: 1208px;
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 p {
@@ -38,6 +39,7 @@ containing the links*/
   background: #fcfcfc;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   height: 64px;
+  z-index: 1000;
 }
 
 #portal-bar-flex {
@@ -78,9 +80,10 @@ containing the links*/
   margin: 0px 0px 7px 74px;
   color: var(--GrayText2-Lighter);
   font-weight: 600;
-  /* medium */
+  line-height: 12px;
   font-size: 16px;
   text-decoration: none;
+  border-bottom: 5px solid transparent;
 }
 
 #nav_portfolio {
@@ -266,24 +269,20 @@ containing the links*/
 .slideshow {
   /* width: 100%;
   max-width: 1188px; */
-  margin: 42px auto 58px;
+  margin: 48px auto 60px;
 }
 
 .slide {
   background-color: #fafafa;
   height: 530px;
-  margin: 10px;
+  margin: auto 10px;
   padding: 0px;
+
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
-#slide1-text {
-  /* Tom Porvaznik builds web apps to simplify, empower, automate. */
-
-  /* position: absolute; */
-  /* width: 304px; */
-  /* height: 357px; */
-  /* left: 174px; */
-  /* top: 140px; */
+.slide1-text {
   margin: 34px 0px 0px 48px;
 
   font-family: "Fira Sans";
@@ -294,6 +293,69 @@ containing the links*/
   /* or 135% */
 
   color: var(--h1-color);
+}
+
+.portfolio-slide-content,
+.slide1-text {
+  margin: 34px 22px 0px 48px;
+}
+
+.portfolio-slide-content h1 {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: var(--h1-color);
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.portfolio-slide-content h2 {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  font-variant: small-caps;
+  margin-bottom: 12px;
+
+  color: #575757; /* gray-text2 */
+}
+
+.portfolio-skills-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-skill {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.body-text-20px {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--GrayTest1); /* gray-text1 */
+}
+
+.portfolio-skill img {
+  padding-right: 18px;
+}
+
+.portfolio-skill p.body-text-20px {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.portfolio-slide-content > p.body-text-20px {
+  margin-top: 10px;
 }
 
 .slide-content {
@@ -310,7 +372,11 @@ span.orange-underline {
   white-space: nowrap;
 }
 
-button#build-btn {
+html {
+  scroll-behavior: smooth;
+}
+
+button.build-btn {
   margin: 20px 40px 43px;
 
   /* Build-btn */
@@ -372,10 +438,209 @@ top: 94px; */
   transform: translate(2px, 2px);
 }
 
+section#skills,
+section#about {
+  margin-right: 10px;
+  margin-bottom: 60px;
+  margin-left: 10px;
+}
+
+section > h2 {
+  color: var(--h1-color);
+
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  margin-top: 0px;
+  margin-bottom: 36px;
+
+  border-bottom: 8px solid var(--accent3);
+  display: inline-block;
+  line-height: 34px;
+}
+
+.section-card {
+  /* position: absolute; */
+  width: 1188px;
+  height: 530px;
+  /* left: 126px;
+  top: 765px; */
+
+  background: #fafafa;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  /* margin: 28px auto; */
+}
+
+/* Skills Section */
+section#skills > div.section-card {
+  padding: 60px 48px;
+  box-sizing: border-box;
+}
+div.skills-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+div.skill {
+  display: flex;
+  width: 212px;
+  align-items: center;
+}
+
+div.skill > div.image-container {
+  width: 44px;
+  text-align: center;
+}
+
+div.skill > p.skill-name {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+
+  color: var(--GrayTest1);
+
+  padding-left: 30px;
+  margin: 0;
+}
+/* /Skills Section */
+
+/* About Section */
+section#about > .section-card {
+  display: flex;
+}
+
+div#about-img {
+  width: 50%;
+  margin-left: 48px;
+  margin-top: 54px;
+}
+
+div#about-content {
+  width: 50%;
+  margin-right: 48px;
+  margin-top: 54px;
+}
+
+section#about > .section-card > div#about-img img {
+  width: 434px;
+  border-radius: 100%;
+}
+
+section#about p.headline {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 38px;
+  /* or 146% */
+
+  color: var(--h1-color);
+}
+
+div.nav > a.selected-nav {
+  border-bottom: 5px solid var(--accent2);
+  display: inline-block;
+}
+
+p.headline span.orange-underline {
+  /* border-bottom: 8px solid var(--accent3);
+  display: inline-block; */
+  line-height: 22px;
+}
+
+section#about p.body-text-20px span.orange-underline {
+  border-bottom: 4px solid var(--accent3);
+  display: inline-block;
+  line-height: 16px;
+}
+
+section#about div.contact-row {
+  display: flex;
+  width: 300px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button#email {
+  border: none;
+  cursor: pointer;
+}
+
+/* Email Popup */
+.popup {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure popup is above other content */
+}
+
+.popup-close-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button#close-popup {
+  font-size: 26px;
+  color: var(--GrayText2-Lighter);
+  border: none;
+}
+
+button#copy-email {
+  position: relative;
+  border: none;
+  background: none;
+}
+
+.email-button-row {
+  display: flex;
+  width: 100px;
+  margin: 10px auto 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ! */
+#copy-email-message {
+  top: -4px;
+  left: 50%;
+  margin-bottom: -5px;
+  transform: translate(-50%, -100%);
+  position: absolute;
+  display: none;
+  width: auto;
+  white-space: nowrap;
+  font-size: 18px;
+  background-color: #d1e6dd;
+  color: #02331c;
+  border: 1px solid #188754;
+  padding: 6px 8px;
+  border-radius: 2px;
+}
+
+div#copy-email-message img {
+  width: 20px;
+  height: 20px;
+  padding-right: 6px;
+}
+/* ! END */
+/* /Email Popup */
+
+/* /About Section */
+
 /* * * VARIABLES * * */
 
 :root {
+  --GrayTest1: #434343;
   --GrayText2-Lighter: #575757;
   --h1-color: #00357a;
+  --accent2: #004db3;
   --accent3: #f26419;
 }

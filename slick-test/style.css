@@ -138,6 +138,16 @@
   position: relative;
   text-align: center;
 }
+
+.blue .slide1-text {
+  font-size: 28px;
+  background-color: #fafafa;
+  color: blue;
+  /* height: 530px;
+  margin: 10px;
+  padding: 0px; */
+}
+
 .variable-width .slick-slide p {
   background: #fff;
   height: 100px;
@@ -182,7 +192,7 @@
 .content {
   margin: auto;
   padding: 20px;
-  width: 600px;
+  width: 1168px;
 }
 .content:after,
 .buttons::after {

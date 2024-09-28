@@ -17,6 +17,8 @@
 
 
   <link type="text/css" rel="stylesheet" href="styles/stylesheet.css" />
+  <!-- <script src="/scripts/Xor.js" defer=""></script> -->
+  <script src="/scripts/link-xor.js"></script>
   <title>Pork Potato</title>
 </head>
 
@@ -30,7 +32,7 @@
       <!--navbar-->
       <div class="nav">
         <a href="portfolio/apps.html" id="nav_portfolio">Portfolio </a>
-        <a href="#skills" id="nav_skills">Skills</a>
+        <a href="#skills" id="nav_skills" class="">Skills</a>
         <a href="#about" id="nav_about">About</a>
       </div>
     </div>
@@ -40,21 +42,233 @@
 
   <main>
 
+    <!-- SLIDESHOW -->
     <div class="slideshow">
+      <!-- SLIDE 1 -->
       <div class="slide">
         <div class="slide-content">
           <div>
-            <p id="slide1-text">Tom Porvaznik builds <span class="orange-underline nowrap">web apps</span> to <em>simplify, empower, automate</em>.</p>
-            <button id="build-btn" class="animate__animated">Build with Tom</button>
+            <p class="slide1-text">Tom Porvaznik builds <span class="orange-underline nowrap">web apps</span> to <em>simplify, empower, automate</em>.</p>
+            <a id="build-link" href="#about">
+              <button id="build-btn" class="build-btn animate__animated">Build with Tom</button>
+            </a>
           </div>
           <div>
             <img src="images/computer.jpg" alt="laptop computer with programming overlay">
           </div>
         </div>
       </div>
-      <div class="slide">second slide</div>
-      <div class="slide">third slide</div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <div class="slide-content">
+          <div class="portfolio-slide-content">
+            <h2>Portfolio</h2>
+            <h1>Choropleth Data Visualization</h1>
+            <div class="portfolio-skills-section">
+              <div class="portfolio-skill">
+                <img src="images/icons/js.svg" alt="js icon" style="width: 30px;">
+                <p class="body-text-20px">Javascript</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/line-chart.svg" alt="line chart icon">
+                <p class="body-text-20px">D3.js</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/data-sheet.svg" alt="data sheet icon">
+                <p class="body-text-20px">Data</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/node-tree.svg" alt="node tree flow chart icon">
+                <p class="body-text-20px">JSON</p>
+              </div>
+            </div>
+            <p class="body-text-20px">Utilizing D3.js, the choropleth map combines geographic data with a JSON file of the educational attainment level of each US county. The map displays the data in a visual format that is easy to read and explore with custom tooltips that supply more details.</p>
+          </div>
+          <div class="portfolio-slide-image">
+            <img src="images/choropleth.jpg" alt="purple choropleth map of usa educational attainment level by county" style="height: 530px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="slide-content">
+          <div class="portfolio-slide-content">
+            <h2>Portfolio</h2>
+            <h1>Exam Scheduler App</h1>
+            <div class="portfolio-skills-section">
+              <div class="portfolio-skill">
+                <img src="images/icons/js.svg" alt="js icon" style="width: 30px;">
+                <p class="body-text-20px">Javascript</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/web-design.svg" alt="line chart icon" style="width: 28px; padding-right: 20px;">
+                <p class="body-text-20px">Material UI</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/nodejs.svg" alt="data sheet icon" style="width: 30px;">
+                <p class="body-text-20px">Node.js</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/react.svg" alt="node tree flow chart icon" style="width: 34px; margin-left: -2px;">
+                <p class="body-text-20px">React</p>
+              </div>
+            </div>
+            <p class="body-text-20px">The Exam Scheduler App streamlined exam date handling for a rigorous degree program. A dynamic model quickly aggregated and visually highlighted scheduling conflicts. Storing data in a machine-readable format enables future automation.</p>
+          </div>
+          <div>
+            <img src="images/exam_scheduler.jpg" alt="exam scheduler app">
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="slide">
+        <div class="slide-content">
+          <div class="portfolio-slide-content">
+            <h2>Portfolio</h2>
+            <h1>Pomodoro Clock</h1>
+            <div class="portfolio-skills-section">
+              <div class="portfolio-skill">
+                <img src="images/icons/js.svg" alt="js icon" style="width: 30px;">
+                <p class="body-text-20px">Javascript</p>
+              </div>
+              <div class="portfolio-skill">
+                <img src="images/icons/react.svg" alt="node tree flow chart icon" style="width: 34px; margin-left: -2px;">
+                <p class="body-text-20px">React</p>
+              </div>
+            </div>
+            <p class="body-text-20px">Developed for the Free Code Camp Frontend Libraries certificate, the Pomodoro Clock is a user-friendly timer crafted to facilitate focused work sessions of 25 minutes or any preferred duration. Break intervals, initially set at 5 minutes, are fully customizable. As a proponent of the Pomodoro method, I appreciate its effectiveness in promoting focused work states.</p>
+          </div>
+          <div>
+            <img src="images/pomodoro.jpg" alt="pomodoro timer app" style="height: 529px;">
+          </div>
+        </div>
+      </div>
+
     </div>
+    <!-- /SLIDESHOW -->
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="section-card">
+        <div class="skills-row">
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/html5.svg" alt="html5 icon" class="skill-icon"></div>
+            <p class="skill-name">HTML</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/css3.svg" alt="css3 icon" class="skill-icon"></div>
+            <p class="skill-name">CSS</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/js.svg" alt="javascript icon" class="skill-icon"></div>
+            <p class="skill-name">Javascript</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/jquery.svg" alt="jquery icon" class="skill-icon"></div>
+            <p class="skill-name">jQuery</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/bootstrap.svg" alt="bootstrap icon" class="skill-icon"></div>
+            <p class="skill-name">Bootstrap</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/react.svg" alt="React icon" class="skill-icon"></div>
+            <p class="skill-name">React</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/nodejs.svg" alt="nodejs icon" class="skill-icon"></div>
+            <p class="skill-name">Node.js</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/line-chart.svg" alt="line chart icon" class="skill-icon"></div>
+            <p class="skill-name">D3.js</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/cloud-database.svg" alt="cloud database icon" class="skill-icon"></div>
+            <p class="skill-name">MongoDB</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/database-admin.svg" alt="database admin icon" class="skill-icon"></div>
+            <p class="skill-name">SQL</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/linux-penguin.svg" alt="linux penguin icon" class="skill-icon"></div>
+            <p class="skill-name">Linux</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/git-branch.svg" alt="git branch icon" class="skill-icon"></div>
+            <p class="skill-name">Git</p>
+          </div>
+        </div>
+        <div class="skills-row">
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/computer-art.svg" alt="pencil and monitor icon" class="skill-icon"></div>
+            <p class="skill-name">Web Design</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/paint-palette.svg" alt="paint palette icon" class="skill-icon"></div>
+            <p class="skill-name">Photoshop</p>
+          </div>
+          <div class="skill">
+            <div class="image-container"><img src="images/icons/vector-graphic.svg" alt="vector graphic icon" class="skill-icon"></div>
+            <p class="skill-name">Illustrator</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Skills Section -->
+
+    <!-- About Sections -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="section-card">
+        <div id="about-img"><img src="images/poirtrait_square.jpg" alt="Tom Porvaznik"></div>
+        <div id="about-content">
+          <p class="body-text-20px">Tom is an accomplished <span class="orange-underline">web developer</span> with a diverse background spanning food service and higher education. He has the insight and skill set to develop useful web apps to enhance organizational efficiencies. With a meticulous approach to problem-solving, Tom is adept at identifying and addressing complex challenges while maintaining a strategic focus on the bigger picture. His ability to zoom out and analyze from a holistic perspective ensures that solutions are not only effective but also aligned with overarching objectives.</p>
+          <p class="headline"><span class="orange-underline">Contact</span> Tom today <span class="orange-underline">to build</span> your company’s next innovation!</p>
+          <div class="contact-row">
+            <div class="contact-icon"><img src="images/icons/linkedin.svg" alt="linkedin icon"></div>
+            <button id="email" class="contact-icon">
+              <!-- EMAIL -->
+              <img src="images/icons/email.svg" alt="email icon">
+            </button>
+            <!-- Popup box -->
+            <div class="popup" id="emailPopup">
+              <div class="popup-close-row">
+                <button id="close-popup">&times;</button>
+              </div>
+              <img src="images/email-address.png" alt="toms email address obscured on purpose.  Use links below to get email address." style="margin: 0px 16px 8px;">
+              <div class="email-button-row">
+                <button id="copy-email" onclick="copyemail(event)" data-encoded-email="607b79647b6662756e547379757d783a777b79" title="Copy Email">
+                  <div id="copy-email-message">
+                    <img src="images/Check_Mark_Green.svg" alt="green checkmark">
+                    Email Copied!</div>
+                  <img src="images/icons/copy-link.svg" alt="copy link icon" >
+                </button>
+                <a class="email" href="79757d7860607b2e607b79647b6662756e547379757d783a777b79" rel="nofollow, noindex" title="Send Email"><img src="images/icons/send-mail.svg" alt="send mail icon"></a>
+              </div>
+
+            </div>
+            <div class="contact-icon"><img src="images/icons/Github.svg" alt="github icon"></div>
+            <div class="contact-icon"><img src="images/icons/Twitter.svg" alt="Twitter icon"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Sections -->_underline
+
+
+
 
   </main>
 
