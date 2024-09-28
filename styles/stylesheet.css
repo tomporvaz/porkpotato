@@ -630,6 +630,20 @@ div#copy-email-message img {
   height: 20px;
   padding-right: 6px;
 }
+
+#copy-email > img,
+#mailto > img {
+  width: 28px;
+}
+
+#copy-email,
+#mailto {
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+}
 /* ! END */
 /* /Email Popup */
 

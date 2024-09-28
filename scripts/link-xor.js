@@ -1,11 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // TODO: choose your own key (0 <= key <= 255):
-  const key = 20;
-  const xor = new Xor(key);
-  const linkXor = new LinkCoder(xor);
+document.addEventListener("DOMContentLoaded", function () {});
 
-  Nodes.decode(".email", linkXor);
-});
+const key = 20;
+const xor = new Xor(key);
+const linkXor = new LinkCoder(xor);
+const textXor = new TextCoder(xor);
 
 // Xor
 
@@ -74,6 +72,28 @@ LinkCoder.prototype.apply = function (action, a) {
   const output = this.coder[action](input);
 
   a.setAttribute("href", output);
+};
+
+// TextCoder
+
+function TextCoder(coder) {
+  this.coder = coder;
+}
+
+TextCoder.prototype.encode = function (span) {
+  this.apply("encode", span);
+};
+
+TextCoder.prototype.decode = function (span) {
+  this.apply("decode", span);
+};
+
+TextCoder.prototype.apply = function (action, span) {
+  const copyEmailButton = document.getElementById("copy-email");
+  const copyEmailButtonData = copyEmailButton.dataset.emailaddress;
+
+  copyEmailButton.dataset.emailaddress =
+    this.coder[action](copyEmailButtonData);
 };
 
 // Nodes

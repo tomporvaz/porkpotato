@@ -68,8 +68,6 @@ emailButton.addEventListener("click", function () {
   console.log("popup:", popup);
   // Calculate the button's position relative to the viewport
   var rect = emailButton.getBoundingClientRect();
-  console.log("emailButton.offsetTop:", emailButton.offsetTop);
-  console.log("rect:", rect);
   var buttonTop = emailButton.offsetTop;
   var buttonLeft = rect.left;
 
@@ -80,11 +78,17 @@ emailButton.addEventListener("click", function () {
 
   // Add event listener for click outside closing popup
   window.addEventListener("click", closePopupOutside);
+
+  // decode buttons
+  Nodes.decode(".mailto", linkXor);
+  Nodes.decode("#copy-email", textXor);
 });
 
 function copyemail(event) {
   let button = event.target;
-  let encodedEmail = button.dataset.encoded - email;
+  console.log(button)
+  let encodedEmail = button.dataset.emailaddress;
+  console.log(encodedEmail)
   let message = document.getElementById("copy-email-message");
 
   //decode email address
@@ -98,7 +102,7 @@ function copyemail(event) {
     message.style.display = "none";
   }, 2000);
 
-  navigator.clipboard.writeText("tomporvaz@gmail.com");
+  navigator.clipboard.writeText(button.dataset.emailaddress);
 }
 
 // Function to close the popup
@@ -109,7 +113,7 @@ function closePopup() {
   // window.removeEventListener("click", closePopupOutside);
 }
 
-window.addEventListener('resize', closePopup)
+window.addEventListener("resize", closePopup);
 
 closePopupButton.addEventListener("click", closePopup);
 
