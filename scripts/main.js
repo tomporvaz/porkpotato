@@ -11,7 +11,6 @@ buildBtn.addEventListener("click", function () {
 
 buildBtn.addEventListener("animationend", () => {
   buildBtn.classList.remove("animate__tada");
-  console.log(buildBtn.classList);
 });
 
 // Selected Nav Link on Scroll
@@ -50,6 +49,8 @@ window.addEventListener("scroll", () => {
 // Get the button element
 var emailButton = document.getElementById("email");
 let closePopupButton = document.getElementById("close-popup");
+let copyEmailButton = document.getElementById("copy-email");
+let mailtoButton = document.getElementById("mailto");
 
 // Get the popup box element
 var popup = document.getElementById("emailPopup");
@@ -65,7 +66,6 @@ function closePopupOutside(event) {
 
 // Show the popup box when the button is clicked
 emailButton.addEventListener("click", function () {
-  console.log("popup:", popup);
   // Calculate the button's position relative to the viewport
   var rect = emailButton.getBoundingClientRect();
   var buttonTop = emailButton.offsetTop;
@@ -79,22 +79,26 @@ emailButton.addEventListener("click", function () {
   // Add event listener for click outside closing popup
   window.addEventListener("click", closePopupOutside);
 
-  // decode buttons
-  Nodes.decode(".mailto", linkXor);
-  Nodes.decode("#copy-email", textXor);
+  // decode email address for mailto and copy-email buttons
+  if (
+    copyEmailButton.dataset.emailaddress ===
+    "607b79647b6662756e547379757d783a777b79"
+  ) {
+    Nodes.decode("#copy-email", textXor);
+  }
+
+  if (
+    mailtoButton.getAttribute("href") ===
+    "79757d78607b2e607b79647b6662756e547379757d783a777b79"
+  ) {
+    Nodes.decode(".mailto", linkXor);
+  }
 });
 
 function copyemail(event) {
-  let button = event.target;
-  console.log(button)
-  let encodedEmail = button.dataset.emailaddress;
-  console.log(encodedEmail)
+  // let copyEmailButton = event.target;
   let message = document.getElementById("copy-email-message");
 
-  //decode email address
-  //todo: rework link-xor.js to accept inputs besides href in the decoder on line 85
-  //copy email to clipboard
-  // navigator.clipboard.writeText(copyText.value);
   message.style.display = "flex";
 
   // Hide the message after 2 seconds
@@ -102,7 +106,8 @@ function copyemail(event) {
     message.style.display = "none";
   }, 2000);
 
-  navigator.clipboard.writeText(button.dataset.emailaddress);
+  //copy email to clipboard
+  navigator.clipboard.writeText(copyEmailButton.dataset.emailaddress);
 }
 
 // Function to close the popup
