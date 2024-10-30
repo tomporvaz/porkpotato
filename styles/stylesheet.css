@@ -221,8 +221,25 @@ a:hover {
   justify-items: center;
 }
 
+.fcc-main h1 a {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 40px;
+  color: var(--h1-color);
+  border-bottom: 9px solid var(--accent3);
+}
+
+.fcc-main h1 a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 12px solid var(--accent3);
+}
+
 .fcc-fullstack-image-container {
-  grid-area: 1 / 2 / 4 / 3;
+  /* grid-area: 1 / 2 / 4 / 3; */
+  grid-column: 2/3;
 }
 
 .fcc-fullstack-image {
@@ -239,7 +256,20 @@ a:hover {
   justify-content: center;
   align-items: center;
   align-content: space-around;
-  margin: 2em;
+  margin: 2rem;
+}
+
+.fcc-card {
+  padding: 2em;
+  background: #fafafa;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.fcc-card img {
+  border: 1px solid #c5c5c5;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .fcc-certificate-image {
@@ -426,7 +456,8 @@ section#about {
   margin-left: 10px;
 }
 
-section > h2 {
+section > h2,
+.fcc-main h3 {
   color: var(--h1-color);
 
   font-family: "Fira Sans";
