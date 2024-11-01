@@ -29,6 +29,11 @@ a:visited {
   /* todo */
 }
 
+/* overide reboot.scss */
+img {
+  box-sizing: content-box;
+}
+
 /*Portal-bar. Below this comment contains all of the code for the 
 portal bar, including the code for the fluffy white clouds 
 containing the links*/
